@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Canva OAuth</title>
+</head>
+<body>
+    <h1>Canva OAuth</h1>
+
+    <pre id="result"></pre>
+
+    <script>
+        const params = new URLSearchParams(window.location.search);
+
+        const code = params.get("code");
+
+        document.getElementById("result").textContent =
+            code
+            ? "Authorization Code:\n\n" + code
+            : "Chưa có code";
+    </script>
+</body>
+</html>
